@@ -155,6 +155,7 @@ footer { font-size: 13px; color: var(--ink-soft); }
         <div><dt id="t-fPlatform"></dt><dd>Windows (Steam)</dd></div>
         <div><dt id="t-fGenre"></dt><dd id="t-genre"></dd></div>
         <div><dt id="t-fLangs"></dt><dd id="t-langs"></dd></div>
+        <div><dt id="t-fContact"></dt><dd><a href="mailto:ult.sunnycontact+business@gmail.com">ult.sunnycontact+business@gmail.com</a></dd></div>
         <div><dt>Steam</dt><dd><a href="https://store.steampowered.com/app/3690370?utm_source=presskit" target="_blank" rel="noopener">store.steampowered.com/app/3690370</a></dd></div>
       </dl>
     </aside>
@@ -283,7 +284,8 @@ var TEXT = {
    "키 아트",
    "키 아트 (로고 포함)",
    "게임 스크린샷"
-  ]
+  ],
+  "fContact": "연락처"
  },
  "en": {
   "menu": "English",
@@ -364,7 +366,8 @@ var TEXT = {
    "Key Art",
    "Key Art (with logo)",
    "Screenshot"
-  ]
+  ],
+  "fContact": "Contact"
  },
  "fr": {
   "menu": "Français",
@@ -445,7 +448,8 @@ var TEXT = {
    "Illustration principale",
    "Illustration principale (avec logo)",
    "Capture d’écran"
-  ]
+  ],
+  "fContact": "Contact"
  },
  "it": {
   "menu": "Italiano",
@@ -526,7 +530,8 @@ var TEXT = {
    "Key art",
    "Key art (con logo)",
    "Screenshot"
-  ]
+  ],
+  "fContact": "Contatti"
  },
  "de": {
   "menu": "Deutsch",
@@ -607,7 +612,8 @@ var TEXT = {
    "Key Art",
    "Key Art (mit Logo)",
    "Screenshot"
-  ]
+  ],
+  "fContact": "Kontakt"
  },
  "es-ES": {
   "menu": "Español (España)",
@@ -688,7 +694,8 @@ var TEXT = {
    "Arte principal",
    "Arte principal (con logotipo)",
    "Captura de pantalla"
-  ]
+  ],
+  "fContact": "Contacto"
  },
  "es-419": {
   "menu": "Español (Latinoamérica)",
@@ -769,7 +776,8 @@ var TEXT = {
    "Arte principal",
    "Arte principal (con logotipo)",
    "Captura de pantalla"
-  ]
+  ],
+  "fContact": "Contacto"
  },
  "ru": {
   "menu": "Русский",
@@ -850,7 +858,8 @@ var TEXT = {
    "Ключевой арт",
    "Ключевой арт (с логотипом)",
    "Скриншот"
-  ]
+  ],
+  "fContact": "Контакты"
  },
  "ja": {
   "menu": "日本語",
@@ -931,7 +940,8 @@ var TEXT = {
    "キーアート",
    "キーアート（ロゴ入り）",
    "スクリーンショット"
-  ]
+  ],
+  "fContact": "お問い合わせ"
  },
  "zh-CN": {
   "menu": "简体中文",
@@ -1012,7 +1022,8 @@ var TEXT = {
    "主视觉图",
    "主视觉图（含标志）",
    "游戏截图"
-  ]
+  ],
+  "fContact": "联系方式"
  },
  "zh-TW": {
   "menu": "繁體中文",
@@ -1093,7 +1104,8 @@ var TEXT = {
    "主視覺圖",
    "主視覺圖（含標誌）",
    "遊戲截圖"
-  ]
+  ],
+  "fContact": "聯絡方式"
  },
  "pt-BR": {
   "menu": "Português (Brasil)",
@@ -1174,7 +1186,8 @@ var TEXT = {
    "Arte principal",
    "Arte principal (com logo)",
    "Captura de tela"
-  ]
+  ],
+  "fContact": "Contato"
  },
  "pt-PT": {
   "menu": "Português (Portugal)",
@@ -1255,7 +1268,8 @@ var TEXT = {
    "Arte principal",
    "Arte principal (com logótipo)",
    "Captura de ecrã"
-  ]
+  ],
+  "fContact": "Contacto"
  }
 };
 
@@ -1287,7 +1301,7 @@ function render(code) {
   var t = TEXT[code];
   document.documentElement.lang = code;
   select.value = code;
-  ["kicker", "title", "quote", "lead", "aboutH", "about1", "factsH", "fDev", "fDate", "fPlatform", "fGenre", "fLangs", "genre", "langs", "membersH"].forEach(function (k) {
+  ["kicker", "title", "quote", "lead", "aboutH", "about1", "factsH", "fDev", "fDate", "fPlatform", "fGenre", "fLangs", "fContact", "genre", "langs", "membersH"].forEach(function (k) {
     document.getElementById("t-" + k).textContent = t[k];
   });
   document.getElementById("t-date").textContent = releaseText(code);
